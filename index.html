@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vanguard Books ARC Team — Welcome</title>
-  <meta name="description" content="Join the Vanguard Books Advance Reader Copy team">
+  <title>You're In — Vanguard Books ARC Team</title>
+  <meta name="description" content="Join the Vanguard Books Advance Reader Copy team and get free books every month">
   <meta name="robots" content="noindex, nofollow">
 
   <!-- Privacy-friendly analytics by Plausible -->
@@ -19,7 +19,7 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
       color: #ffffff;
       min-height: 100vh;
       display: flex;
@@ -30,160 +30,197 @@
     }
 
     .container {
-      max-width: 600px;
+      max-width: 560px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 48px 40px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
       text-align: center;
     }
 
-    .brand {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 3px;
+    .badge {
+      display: inline-block;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid rgba(0, 255, 136, 0.3);
       color: #00ff88;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: 32px;
-      font-weight: 700;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.15;
       margin-bottom: 16px;
-      line-height: 1.3;
+      letter-spacing: -0.5px;
     }
 
-    .subtitle {
-      font-size: 17px;
-      color: #b4b4b4;
-      margin-bottom: 40px;
-    }
-
-    .steps {
-      text-align: left;
-      background: rgba(0, 0, 0, 0.2);
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin-bottom: 32px;
-    }
-
-    .steps h2 {
-      font-size: 18px;
+    .highlight {
       color: #00ff88;
-      margin-bottom: 20px;
-      font-weight: 600;
     }
 
-    .step {
+    .subheadline {
+      font-size: 18px;
+      color: #c0c0c0;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .benefits {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+
+    .benefit {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-size: 15px;
+      color: #ffffff;
     }
 
-    .step:last-child {
-      margin-bottom: 0;
-    }
+    .benefit:last-child { margin-bottom: 0; }
 
-    .step-number {
-      background: #00ff88;
-      color: #1a1a2e;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .check {
+      color: #00ff88;
       font-weight: 700;
-      font-size: 14px;
-      margin-right: 14px;
+      margin-right: 12px;
+      font-size: 18px;
       flex-shrink: 0;
+      line-height: 1.4;
+    }
+
+    .cta-container {
+      margin-bottom: 20px;
     }
 
     .cta {
       display: inline-block;
-      background: #00ff88;
-      color: #1a1a2e;
+      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+      color: #0f0f1e;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: 700;
-      padding: 18px 48px;
+      font-size: 19px;
+      font-weight: 800;
+      padding: 20px 52px;
       border-radius: 50px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      margin-bottom: 24px;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
+      letter-spacing: 0.3px;
     }
 
     .cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+    }
+
+    .urgency {
+      font-size: 13px;
+      color: #00ff88;
+      margin-top: 16px;
+      font-weight: 600;
+    }
+
+    .guarantees {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 28px 0 16px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .guarantee {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: #00ff88;
+      border-radius: 50%;
     }
 
     .disclosure {
-      font-size: 13px;
-      color: #888;
-      line-height: 1.5;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    .footer {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 12px;
       color: #666;
+      line-height: 1.5;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     @media (max-width: 600px) {
-      .container { padding: 32px 24px; }
-      h1 { font-size: 26px; }
-      .steps { padding: 20px 24px; }
-      .cta { font-size: 16px; padding: 16px 36px; }
+      .container { padding: 36px 24px; }
+      h1 { font-size: 28px; }
+      .subheadline { font-size: 16px; }
+      .benefits { padding: 20px 22px; }
+      .cta { font-size: 17px; padding: 18px 40px; }
+      .guarantees { gap: 14px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="brand">Vanguard Books</div>
-    <h1>Welcome to our ARC Team! 👋</h1>
-    <p class="subtitle">You're one quick step away from joining our Advance Reader Copy community.</p>
+    <div class="badge">✓ You're In</div>
 
-    <div class="steps">
-      <h2>How it works:</h2>
-      <div class="step">
-        <div class="step-number">1</div>
-        <div>Tap the button below — it opens an Amazon page</div>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <div>Leave a short honest comment (2-3 sentences is enough)</div>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <div>Submit — that's it! We'll welcome you in shortly.</div>
-      </div>
-    </div>
+    <h1>One last step to claim your <span class="highlight">free book access</span></h1>
 
-    <a href="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2"
-       class="cta"
-       target="_blank"
-       rel="noopener"
-       id="amazon-link">
-      Go to Amazon →
-    </a>
-
-    <p class="disclosure">
-      Reviews are completely optional but greatly appreciated by our authors.
-      You'll receive a free advance copy as part of our reader program.
-      Your feedback should always be honest — positive or negative.
+    <p class="subheadline">
+      You're about to join Vanguard Books' ARC Team — a private community of passionate readers who get early access to our books every month.
     </p>
 
-    <div class="footer">
-      © Vanguard Books — ARC Team
+    <div class="benefits">
+      <div class="benefit">
+        <span class="check">✓</span>
+        <span><strong>Free advance copies</strong> of upcoming releases, before they hit the stores</span>
+      </div>
+      <div class="benefit">
+        <span class="check">✓</span>
+        <span><strong>Compensated readers</strong> — we value your time and feedback</span>
+      </div>
+      <div class="benefit">
+        <span class="check">✓</span>
+        <span><strong>Honest reviews only</strong> — positive or negative, we want the truth</span>
+      </div>
+      <div class="benefit">
+        <span class="check">✓</span>
+        <span><strong>Quick 30-second check</strong> — tap below to activate your profile</span>
+      </div>
     </div>
+
+    <div class="cta-container">
+      <a href="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2"
+         class="cta"
+         target="_blank"
+         rel="noopener"
+         id="amazon-link">
+        Activate Access →
+      </a>
+      <div class="urgency">Takes less than 30 seconds</div>
+    </div>
+
+    <div class="guarantees">
+      <div class="guarantee"><span class="dot"></span> No spam</div>
+      <div class="guarantee"><span class="dot"></span> Leave anytime</div>
+      <div class="guarantee"><span class="dot"></span> Instant access</div>
+    </div>
+
+    <p class="disclosure">
+      Vanguard Books ARC Team. Reviews are completely optional. You'll receive free advance copies as part of our reader program. Your feedback should always be honest — positive or negative.
+    </p>
   </div>
 
   <script>
