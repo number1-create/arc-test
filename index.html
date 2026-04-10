@@ -55,10 +55,10 @@
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
+      line-height: 1.2;
+      margin-bottom: 14px;
       letter-spacing: -0.5px;
     }
 
@@ -67,55 +67,119 @@
     }
 
     .subheadline {
-      font-size: 18px;
+      font-size: 16px;
       color: #c0c0c0;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       line-height: 1.5;
     }
 
-    .benefits {
+    .steps {
       background: rgba(0, 0, 0, 0.25);
       border-radius: 14px;
       padding: 24px 28px;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       text-align: left;
     }
 
-    .benefit {
+    .steps-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #00ff88;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .step {
       display: flex;
       align-items: flex-start;
       margin-bottom: 14px;
-      font-size: 15px;
+      font-size: 14px;
       color: #ffffff;
     }
 
-    .benefit:last-child { margin-bottom: 0; }
+    .step:last-child { margin-bottom: 0; }
 
-    .check {
-      color: #00ff88;
-      font-weight: 700;
+    .step-num {
+      background: #00ff88;
+      color: #0f0f1e;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
       margin-right: 12px;
-      font-size: 18px;
       flex-shrink: 0;
-      line-height: 1.4;
     }
 
-    .cta-container {
-      margin-bottom: 20px;
+    .notice {
+      background: rgba(255, 200, 0, 0.08);
+      border-left: 3px solid #ffc800;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #ffd966;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .form-container {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      text-align: left;
+      font-size: 13px;
+      color: #b0b0b0;
+      font-weight: 600;
+      margin-bottom: 6px;
+      margin-top: 12px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      color: #ffffff;
+      font-size: 15px;
+      font-family: inherit;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #00ff88;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .form-input::placeholder {
+      color: #666;
     }
 
     .cta {
       display: inline-block;
+      width: 100%;
       background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
       color: #0f0f1e;
       text-decoration: none;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 800;
-      padding: 20px 52px;
+      padding: 18px 32px;
       border-radius: 50px;
       transition: transform 0.2s, box-shadow 0.3s;
       box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
       letter-spacing: 0.3px;
+      border: none;
+      cursor: pointer;
+      margin-top: 16px;
+      font-family: inherit;
     }
 
     .cta:hover {
@@ -124,93 +188,109 @@
     }
 
     .urgency {
-      font-size: 13px;
+      font-size: 12px;
       color: #00ff88;
-      margin-top: 16px;
+      margin-top: 12px;
       font-weight: 600;
     }
 
     .guarantees {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin: 28px 0 16px;
+      gap: 16px;
+      margin-top: 24px;
       flex-wrap: wrap;
-      font-size: 12px;
+      font-size: 11px;
       color: #888;
     }
 
     .guarantee {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .dot {
-      width: 6px;
-      height: 6px;
+      width: 5px;
+      height: 5px;
       background: #00ff88;
       border-radius: 50%;
     }
 
     .disclosure {
-      font-size: 12px;
-      color: #666;
+      font-size: 11px;
+      color: #555;
       line-height: 1.5;
-      margin-top: 24px;
-      padding-top: 20px;
+      margin-top: 20px;
+      padding-top: 18px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     @media (max-width: 600px) {
-      .container { padding: 36px 24px; }
-      h1 { font-size: 28px; }
-      .subheadline { font-size: 16px; }
-      .benefits { padding: 20px 22px; }
-      .cta { font-size: 17px; padding: 18px 40px; }
-      .guarantees { gap: 14px; }
+      .container { padding: 32px 22px; }
+      h1 { font-size: 25px; }
+      .subheadline { font-size: 14px; }
+      .steps { padding: 18px 20px; }
+      .cta { font-size: 16px; padding: 16px 28px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="badge">✓ You're In</div>
+    <div class="badge">✓ Almost There</div>
 
-    <h1>One last step to claim your <span class="highlight">free book access</span></h1>
+    <h1>One quick step to <span class="highlight">activate your access</span></h1>
 
     <p class="subheadline">
-      You're about to join Vanguard Books' ARC Team — a private community of passionate readers who get early access to our books every month.
+      You're about to join Vanguard Books' ARC Team. To activate your profile and start receiving free advance copies, we need a quick verification.
     </p>
 
-    <div class="benefits">
-      <div class="benefit">
-        <span class="check">✓</span>
-        <span><strong>Free advance copies</strong> of upcoming releases, before they hit the stores</span>
+    <div class="steps">
+      <div class="steps-title">How it works — 30 seconds</div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>Enter your name and email below</div>
       </div>
-      <div class="benefit">
-        <span class="check">✓</span>
-        <span><strong>Compensated readers</strong> — we value your time and feedback</span>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>Tap "Activate Access" — it opens an Amazon page</div>
       </div>
-      <div class="benefit">
-        <span class="check">✓</span>
-        <span><strong>Honest reviews only</strong> — positive or negative, we want the truth</span>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>Leave a short comment (2-3 sentences is enough) to verify your profile</div>
       </div>
-      <div class="benefit">
-        <span class="check">✓</span>
-        <span><strong>Quick 30-second check</strong> — tap below to activate your profile</span>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>Submit — you're in, and we'll send your first advance copy shortly</div>
       </div>
     </div>
 
-    <div class="cta-container">
-      <a href="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2"
-         class="cta"
-         target="_blank"
-         rel="noopener"
-         id="amazon-link">
-        Activate Access →
-      </a>
-      <div class="urgency">Takes less than 30 seconds</div>
+    <div class="notice">
+      ⚠️ This is a <strong>profile verification</strong>, not a purchase. You don't need to buy or read the book — just leave a quick honest comment to activate your reader account.
     </div>
+
+    <form method="post" class="form-container" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" id="aweber-form">
+      <input type="hidden" name="meta_web_form_id" value="1064684359" />
+      <input type="hidden" name="meta_split_id" value="" />
+      <input type="hidden" name="listname" value="awlist6879821" />
+      <input type="hidden" name="redirect" value="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2" />
+      <input type="hidden" name="meta_redirect_onlist" value="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2" />
+      <input type="hidden" name="meta_adtracking" value="ARC_Team_Traffic_Test" />
+      <input type="hidden" name="meta_message" value="1" />
+      <input type="hidden" name="meta_required" value="name,email" />
+      <input type="hidden" name="meta_tooltip" value="" />
+
+      <label class="form-label" for="name">Your Name</label>
+      <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+
+      <label class="form-label" for="email">Your Email</label>
+      <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+
+      <button type="submit" class="cta" id="submit-btn">
+        Activate Access →
+      </button>
+      <div class="urgency">Takes less than 30 seconds</div>
+    </form>
 
     <div class="guarantees">
       <div class="guarantee"><span class="dot"></span> No spam</div>
@@ -224,16 +304,16 @@
   </div>
 
   <script>
-    // Track Amazon click as Plausible custom event
-    document.getElementById('amazon-link').addEventListener('click', function() {
+    // Track form submit as Plausible custom event
+    document.getElementById('aweber-form').addEventListener('submit', function() {
       try {
         if (typeof plausible === 'function') {
-          plausible('Amazon Click');
+          plausible('Form Submit');
         }
       } catch(e) {}
       try {
-        const count = parseInt(localStorage.getItem('amazon_clicks') || '0') + 1;
-        localStorage.setItem('amazon_clicks', count);
+        const count = parseInt(localStorage.getItem('form_submits') || '0') + 1;
+        localStorage.setItem('form_submits', count);
       } catch(e) {}
     });
   </script>
