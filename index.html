@@ -187,8 +187,13 @@
   </div>
 
   <script>
-    // Simple click counter fallback (localStorage)
+    // Track Amazon click as Plausible custom event
     document.getElementById('amazon-link').addEventListener('click', function() {
+      try {
+        if (typeof plausible === 'function') {
+          plausible('Amazon Click');
+        }
+      } catch(e) {}
       try {
         const count = parseInt(localStorage.getItem('amazon_clicks') || '0') + 1;
         localStorage.setItem('amazon_clicks', count);
