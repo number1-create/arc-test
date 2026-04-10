@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanguard Books ARC Team — Welcome</title>
+  <meta name="description" content="Join the Vanguard Books Advance Reader Copy team">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Plausible Analytics (free, privacy-friendly, no cookie banner needed) -->
+  <script defer data-domain="number1-create.github.io" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 48px 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #00ff88;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #b4b4b4;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      text-align: left;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+
+    .steps h2 {
+      font-size: 18px;
+      color: #00ff88;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .step:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      background: #00ff88;
+      color: #1a1a2e;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      margin-right: 14px;
+      flex-shrink: 0;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #00ff88;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 18px 48px;
+      border-radius: 50px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 24px;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    }
+
+    .disclosure {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.5;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 12px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 32px 24px; }
+      h1 { font-size: 26px; }
+      .steps { padding: 20px 24px; }
+      .cta { font-size: 16px; padding: 16px 36px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">Vanguard Books</div>
+    <h1>Welcome to our ARC Team! 👋</h1>
+    <p class="subtitle">You're one quick step away from joining our Advance Reader Copy community.</p>
+
+    <div class="steps">
+      <h2>How it works:</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>Tap the button below — it opens an Amazon page</div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>Leave a short honest comment (2-3 sentences is enough)</div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>Submit — that's it! We'll welcome you in shortly.</div>
+      </div>
+    </div>
+
+    <a href="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2"
+       class="cta"
+       target="_blank"
+       rel="noopener"
+       id="amazon-link">
+      Go to Amazon →
+    </a>
+
+    <p class="disclosure">
+      Reviews are completely optional but greatly appreciated by our authors.
+      You'll receive a free advance copy as part of our reader program.
+      Your feedback should always be honest — positive or negative.
+    </p>
+
+    <div class="footer">
+      © Vanguard Books — ARC Team
+    </div>
+  </div>
+
+  <script>
+    // Simple click counter fallback (localStorage)
+    document.getElementById('amazon-link').addEventListener('click', function() {
+      try {
+        const count = parseInt(localStorage.getItem('amazon_clicks') || '0') + 1;
+        localStorage.setItem('amazon_clicks', count);
+      } catch(e) {}
+    });
+  </script>
+</body>
+</html>
