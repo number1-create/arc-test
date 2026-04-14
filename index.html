@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>You're In — Vanguard Books ARC Team</title>
-  <meta name="description" content="Join the Vanguard Books Advance Reader Copy team and get free books every month">
+  <title>Free ASVAB Study Guide — Vanguard Books Reader Program</title>
+  <meta name="description" content="Get a free copy of the ASVAB Study Guide from the Vanguard Books Reader Program">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Privacy-friendly analytics by Plausible -->
+  <!-- Plausible Analytics -->
   <script async src="https://plausible.io/js/pa-iyYNTZ6knacFJUCGUzFmn.js"></script>
   <script>
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
@@ -54,17 +54,42 @@
       margin-bottom: 24px;
     }
 
+    .price-tag {
+      display: inline-block;
+      background: rgba(255, 60, 60, 0.15);
+      border: 1px solid rgba(255, 60, 60, 0.3);
+      color: #ff6b6b;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: line-through;
+      margin-bottom: 8px;
+    }
+
+    .free-tag {
+      display: inline-block;
+      background: rgba(0, 255, 136, 0.15);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      color: #00ff88;
+      padding: 4px 14px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 800;
+      margin-left: 8px;
+      margin-bottom: 8px;
+    }
+
     h1 {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 800;
       line-height: 1.2;
       margin-bottom: 14px;
+      margin-top: 12px;
       letter-spacing: -0.5px;
     }
 
-    .highlight {
-      color: #00ff88;
-    }
+    .highlight { color: #00ff88; }
 
     .subheadline {
       font-size: 16px;
@@ -73,6 +98,33 @@
       line-height: 1.5;
     }
 
+    .book-info {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .book-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .book-details {
+      font-size: 14px;
+      color: #b0b0b0;
+      line-height: 1.8;
+    }
+
+    .book-details span {
+      color: #00ff88;
+      font-weight: 600;
+    }
+
+    /* How it works */
     .steps {
       background: rgba(0, 0, 0, 0.25);
       border-radius: 14px;
@@ -116,20 +168,7 @@
       flex-shrink: 0;
     }
 
-    .notice {
-      background: rgba(255, 200, 0, 0.08);
-      border-left: 3px solid #ffc800;
-      padding: 12px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      color: #ffd966;
-      margin-bottom: 28px;
-      text-align: left;
-    }
-
-    .form-container {
-      margin-bottom: 24px;
-    }
+    .form-container { margin-bottom: 24px; }
 
     .form-label {
       display: block;
@@ -159,9 +198,7 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
-    .form-input::placeholder {
-      color: #666;
-    }
+    .form-input::placeholder { color: #666; }
 
     .cta {
       display: inline-block;
@@ -217,6 +254,36 @@
       border-radius: 50%;
     }
 
+    /* Thank you state */
+    .thank-you { display: none; }
+    .thank-you.active { display: block; }
+    .form-state.hidden { display: none; }
+
+    .download-btn {
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+      color: #0f0f1e;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 18px 32px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
+      margin-top: 20px;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
+    }
+
+    .check-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
     .disclosure {
       font-size: 11px;
       color: #555;
@@ -226,94 +293,153 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
+    /* Section anchors */
+    #how-it-works, #books { scroll-margin-top: 20px; }
+
     @media (max-width: 600px) {
       .container { padding: 32px 22px; }
       h1 { font-size: 25px; }
       .subheadline { font-size: 14px; }
-      .steps { padding: 18px 20px; }
-      .cta { font-size: 16px; padding: 16px 28px; }
+      .book-info, .steps { padding: 18px 20px; }
+      .cta, .download-btn { font-size: 16px; padding: 16px 28px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="badge">✓ Almost There</div>
 
-    <h1>One quick step to <span class="highlight">activate your access</span></h1>
+    <!-- FORM STATE -->
+    <div class="form-state" id="form-state">
+      <div class="badge">📚 Reader Program</div>
 
-    <p class="subheadline">
-      You're about to join Vanguard Books' ARC Team. To activate your profile and start receiving free advance copies, we need a quick verification.
-    </p>
+      <div>
+        <span class="price-tag">$14.99</span>
+        <span class="free-tag">FREE</span>
+      </div>
 
-    <div class="steps">
-      <div class="steps-title">How it works — 30 seconds</div>
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>Enter your name and email below</div>
+      <h1>Get the <span class="highlight">ASVAB Study Guide</span> for free</h1>
+
+      <p class="subheadline">
+        Join 1,400+ readers in the Vanguard Books Reader Program. Get this month's book — no strings attached.
+      </p>
+
+      <div class="book-info">
+        <div class="book-title">📖 ASVAB Study Guide 2025-2026</div>
+        <div class="book-details">
+          <span>✓</span> Complete exam preparation guide<br>
+          <span>✓</span> Practice questions with detailed answers<br>
+          <span>✓</span> Study strategies and test-day tips<br>
+          <span>✓</span> Normally $14.99 on Amazon — <span>yours free</span>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>Tap "Activate Access" — it opens an Amazon page</div>
+
+      <div class="steps" id="how-it-works">
+        <div class="steps-title">How it works</div>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>Enter your name and email below</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>Get instant access to the full book (PDF)</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>Read it at your own pace — it's yours to keep</div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>Leave a short comment (2-3 sentences is enough) to verify your profile</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div>Submit — you're in, and we'll send your first advance copy shortly</div>
+
+      <form method="post" class="form-container" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" id="aweber-form">
+        <input type="hidden" name="meta_web_form_id" value="1064684359" />
+        <input type="hidden" name="meta_split_id" value="" />
+        <input type="hidden" name="listname" value="awlist6879821" />
+        <input type="hidden" name="redirect" value="https://number1-create.github.io/arc-test/#download" />
+        <input type="hidden" name="meta_redirect_onlist" value="https://number1-create.github.io/arc-test/#download" />
+        <input type="hidden" name="meta_adtracking" value="ARC_Reader_Program_Messenger" />
+        <input type="hidden" name="meta_message" value="1" />
+        <input type="hidden" name="meta_required" value="name,email" />
+        <input type="hidden" name="meta_tooltip" value="" />
+
+        <label class="form-label" for="name">Your Name</label>
+        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+
+        <label class="form-label" for="email">Your Email</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+
+        <button type="submit" class="cta" id="submit-btn">
+          Get My Free Copy →
+        </button>
+        <div class="urgency">Instant download — no credit card needed</div>
+      </form>
+
+      <div class="guarantees">
+        <div class="guarantee"><span class="dot"></span> 100% free</div>
+        <div class="guarantee"><span class="dot"></span> No spam</div>
+        <div class="guarantee"><span class="dot"></span> Instant access</div>
       </div>
     </div>
 
-    <div class="notice">
-      ⚠️ This is a <strong>profile verification</strong>, not a purchase. You don't need to buy or read the book — just leave a quick honest comment to activate your reader account.
+    <!-- THANK YOU STATE (shown after form submit or #download) -->
+    <div class="thank-you" id="thank-you">
+      <div class="check-icon">✅</div>
+
+      <h1>Your book is ready!</h1>
+
+      <p class="subheadline">
+        Download your free ASVAB Study Guide below. Enjoy the read!
+      </p>
+
+      <a href="https://drive.google.com/file/d/1QyZeWN2MiBswCHi9sdP1oQbw5xLlR3vz/view?usp=sharing"
+         class="download-btn"
+         target="_blank"
+         id="download-link">
+        📖 Download Your Free Book
+      </a>
+
+      <p style="color: #888; font-size: 13px; margin-top: 20px;">
+        We'll follow up by email in a few days to hear what you think.
+      </p>
+
+      <div class="guarantees">
+        <div class="guarantee"><span class="dot"></span> PDF format</div>
+        <div class="guarantee"><span class="dot"></span> Yours to keep</div>
+        <div class="guarantee"><span class="dot"></span> No strings attached</div>
+      </div>
     </div>
 
-    <form method="post" class="form-container" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" id="aweber-form">
-      <input type="hidden" name="meta_web_form_id" value="1064684359" />
-      <input type="hidden" name="meta_split_id" value="" />
-      <input type="hidden" name="listname" value="awlist6879821" />
-      <input type="hidden" name="redirect" value="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2" />
-      <input type="hidden" name="meta_redirect_onlist" value="https://www.amazon.com/review/create-review/ref=cm_cr_othr_d_wr_but_top?ie=UTF8&channel=glance-detail&asin=B0GPMY2ZM2" />
-      <input type="hidden" name="meta_adtracking" value="ARC_Team_Traffic_Test" />
-      <input type="hidden" name="meta_message" value="1" />
-      <input type="hidden" name="meta_required" value="name,email" />
-      <input type="hidden" name="meta_tooltip" value="" />
-
-      <label class="form-label" for="name">Your Name</label>
-      <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
-
-      <label class="form-label" for="email">Your Email</label>
-      <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
-
-      <button type="submit" class="cta" id="submit-btn">
-        Activate Access →
-      </button>
-      <div class="urgency">Takes less than 30 seconds</div>
-    </form>
-
-    <div class="guarantees">
-      <div class="guarantee"><span class="dot"></span> No spam</div>
-      <div class="guarantee"><span class="dot"></span> Leave anytime</div>
-      <div class="guarantee"><span class="dot"></span> Instant access</div>
-    </div>
+    <!-- BOOKS SECTION (for "What books are available?" button) -->
+    <div id="books" style="display:none;"></div>
 
     <p class="disclosure">
-      Vanguard Books ARC Team. Reviews are completely optional. You'll receive free advance copies as part of our reader program. Your feedback should always be honest — positive or negative.
+      Vanguard Books Reader Program. You'll receive occasional emails about new books and reading opportunities. Unsubscribe anytime. Your data is never shared with third parties.
     </p>
   </div>
 
   <script>
-    // Track form submit as Plausible custom event
+    // Show thank you state if #download in URL (redirect from AWeber)
+    if (window.location.hash === '#download') {
+      document.getElementById('form-state').classList.add('hidden');
+      document.getElementById('thank-you').classList.add('active');
+      if (typeof plausible === 'function') {
+        plausible('Book Downloaded');
+      }
+    }
+
+    // Track form submit
     document.getElementById('aweber-form').addEventListener('submit', function() {
       try {
         if (typeof plausible === 'function') {
           plausible('Form Submit');
         }
       } catch(e) {}
+    });
+
+    // Track download click
+    document.getElementById('download-link').addEventListener('click', function() {
       try {
-        const count = parseInt(localStorage.getItem('form_submits') || '0') + 1;
-        localStorage.setItem('form_submits', count);
+        if (typeof plausible === 'function') {
+          plausible('PDF Download Click');
+        }
       } catch(e) {}
     });
   </script>
