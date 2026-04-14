@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free ASVAB Study Guide — Vanguard Books Reader Program</title>
-  <meta name="description" content="Get a free copy of the ASVAB Study Guide from the Vanguard Books Reader Program">
+  <title>Free ASVAB Study Guide — Vanguard Books</title>
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- Plausible Analytics -->
   <script async src="https://plausible.io/js/pa-iyYNTZ6knacFJUCGUzFmn.js"></script>
   <script>
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
@@ -22,115 +20,180 @@
       background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
       color: #ffffff;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      line-height: 1.6;
+      padding: 16px;
+      line-height: 1.5;
     }
 
     .container {
-      max-width: 560px;
+      max-width: 440px;
       width: 100%;
+      margin: 0 auto;
+    }
+
+    /* HERO — above the fold on mobile */
+    .hero {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 20px;
-      padding: 48px 40px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      padding: 28px 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       text-align: center;
     }
 
-    .badge {
-      display: inline-block;
-      background: rgba(0, 255, 136, 0.1);
-      border: 1px solid rgba(0, 255, 136, 0.3);
-      color: #00ff88;
-      padding: 6px 16px;
-      border-radius: 50px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .price-tag {
-      display: inline-block;
-      background: rgba(255, 60, 60, 0.15);
-      border: 1px solid rgba(255, 60, 60, 0.3);
+    .urgency-bar {
+      background: rgba(255, 60, 60, 0.12);
+      border: 1px solid rgba(255, 60, 60, 0.25);
       color: #ff6b6b;
-      padding: 4px 12px;
-      border-radius: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
       font-size: 13px;
       font-weight: 700;
-      text-decoration: line-through;
-      margin-bottom: 8px;
+      margin-bottom: 20px;
+      display: inline-block;
     }
 
-    .free-tag {
-      display: inline-block;
+    .urgency-bar span { color: #ffffff; }
+
+    .book-cover {
+      width: 140px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 18px;
+    }
+
+    .price-row {
+      margin-bottom: 6px;
+    }
+
+    .price-old {
+      color: #ff6b6b;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: line-through;
+      margin-right: 8px;
+    }
+
+    .price-free {
       background: rgba(0, 255, 136, 0.15);
       border: 1px solid rgba(0, 255, 136, 0.3);
       color: #00ff88;
-      padding: 4px 14px;
+      padding: 3px 12px;
       border-radius: 6px;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 800;
-      margin-left: 8px;
-      margin-bottom: 8px;
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 14px;
-      margin-top: 12px;
-      letter-spacing: -0.5px;
+      margin: 10px 0 16px;
     }
 
     .highlight { color: #00ff88; }
 
-    .subheadline {
+    /* FORM */
+    .form-container { margin-bottom: 16px; }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      color: #ffffff;
       font-size: 16px;
-      color: #c0c0c0;
-      margin-bottom: 28px;
-      line-height: 1.5;
+      font-family: inherit;
+      margin-bottom: 10px;
+      transition: border-color 0.2s;
     }
 
-    .book-info {
-      background: rgba(0, 0, 0, 0.25);
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin-bottom: 28px;
+    .form-input:focus {
+      outline: none;
+      border-color: #00ff88;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-input::placeholder { color: #666; }
+
+    .cta {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+      color: #0f0f1e;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 16px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+      transition: transform 0.2s, box-shadow 0.3s;
+      font-family: inherit;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(0, 255, 136, 0.4);
+    }
+
+    /* TRUST SIGNALS */
+    .trust {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .trust-item::before {
+      content: "✓";
+      color: #00ff88;
+      font-weight: 700;
+    }
+
+    /* BELOW THE FOLD — convincing section */
+    .details {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 16px;
       text-align: left;
     }
 
-    .book-title {
-      font-size: 18px;
+    .details-title {
+      font-size: 16px;
       font-weight: 700;
-      color: #ffffff;
       margin-bottom: 12px;
+      color: #ffffff;
     }
 
-    .book-details {
+    .detail-item {
       font-size: 14px;
       color: #b0b0b0;
-      line-height: 1.8;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
     }
 
-    .book-details span {
-      color: #00ff88;
-      font-weight: 600;
+    .detail-item::before {
+      content: "📖";
+      position: absolute;
+      left: 0;
     }
 
-    /* How it works */
-    .steps {
-      background: rgba(0, 0, 0, 0.25);
-      border-radius: 14px;
-      padding: 24px 28px;
-      margin-bottom: 28px;
-      text-align: left;
+    .steps-section {
+      margin-top: 20px;
     }
 
     .steps-title {
@@ -139,23 +202,21 @@
       color: #00ff88;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 16px;
-      text-align: center;
+      margin-bottom: 12px;
     }
 
-    .step {
+    .mini-step {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 14px;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
       font-size: 14px;
-      color: #ffffff;
+      color: #c0c0c0;
     }
 
-    .step:last-child { margin-bottom: 0; }
-
-    .step-num {
-      background: #00ff88;
-      color: #0f0f1e;
+    .mini-step-num {
+      background: rgba(0, 255, 136, 0.15);
+      color: #00ff88;
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -163,284 +224,153 @@
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 13px;
-      margin-right: 12px;
+      font-size: 12px;
       flex-shrink: 0;
     }
 
-    .form-container { margin-bottom: 24px; }
-
-    .form-label {
-      display: block;
-      text-align: left;
-      font-size: 13px;
-      color: #b0b0b0;
-      font-weight: 600;
-      margin-bottom: 6px;
-      margin-top: 12px;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 14px 16px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 10px;
-      color: #ffffff;
-      font-size: 15px;
-      font-family: inherit;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .form-input:focus {
-      outline: none;
-      border-color: #00ff88;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .form-input::placeholder { color: #666; }
-
-    .cta {
-      display: inline-block;
-      width: 100%;
-      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
-      color: #0f0f1e;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 800;
-      padding: 18px 32px;
-      border-radius: 50px;
-      transition: transform 0.2s, box-shadow 0.3s;
-      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
-      letter-spacing: 0.3px;
-      border: none;
-      cursor: pointer;
+    .disclosure {
+      font-size: 10px;
+      color: #444;
+      text-align: center;
       margin-top: 16px;
-      font-family: inherit;
+      line-height: 1.4;
     }
 
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
-    }
-
-    .urgency {
-      font-size: 12px;
-      color: #00ff88;
-      margin-top: 12px;
-      font-weight: 600;
-    }
-
-    .guarantees {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-      font-size: 11px;
-      color: #888;
-    }
-
-    .guarantee {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .dot {
-      width: 5px;
-      height: 5px;
-      background: #00ff88;
-      border-radius: 50%;
-    }
-
-    /* Thank you state */
-    .thank-you { display: none; }
+    /* THANK YOU STATE */
+    .thank-you { display: none; text-align: center; }
     .thank-you.active { display: block; }
     .form-state.hidden { display: none; }
 
+    .check-icon { font-size: 48px; margin-bottom: 12px; }
+
     .download-btn {
-      display: inline-block;
+      display: block;
       width: 100%;
       background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
       color: #0f0f1e;
       text-decoration: none;
       font-size: 18px;
       font-weight: 800;
-      padding: 18px 32px;
+      padding: 16px;
       border-radius: 50px;
-      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
-      margin-top: 20px;
-      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+      margin-top: 16px;
+      transition: transform 0.2s;
     }
 
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4);
-    }
+    .download-btn:hover { transform: translateY(-2px); }
 
-    .check-icon {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-
-    .disclosure {
-      font-size: 11px;
-      color: #555;
-      line-height: 1.5;
-      margin-top: 20px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    /* Section anchors */
-    #how-it-works, #books { scroll-margin-top: 20px; }
-
-    @media (max-width: 600px) {
-      .container { padding: 32px 22px; }
-      h1 { font-size: 25px; }
-      .subheadline { font-size: 14px; }
-      .book-info, .steps { padding: 18px 20px; }
-      .cta, .download-btn { font-size: 16px; padding: 16px 28px; }
+    .post-download {
+      font-size: 13px;
+      color: #888;
+      margin-top: 16px;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="hero">
 
-    <!-- FORM STATE -->
-    <div class="form-state" id="form-state">
-      <div class="badge">📚 Reader Program</div>
+      <!-- FORM STATE -->
+      <div class="form-state" id="form-state">
 
-      <div>
-        <span class="price-tag">$14.99</span>
-        <span class="free-tag">FREE</span>
-      </div>
+        <div class="urgency-bar">⚡ Only <span>12 spots</span> left this month</div>
 
-      <h1>Get the <span class="highlight">ASVAB Study Guide</span> for free</h1>
+        <!-- BOOK COVER — sostituire src con immagine reale -->
+        <img class="book-cover" src="cover.jpg" alt="ASVAB Study Guide 2026-2027 cover" id="book-cover" />
 
-      <p class="subheadline">
-        Join 1,400+ readers in the Vanguard Books Reader Program. Get this month's book — no strings attached.
-      </p>
+        <div class="price-row">
+          <span class="price-old">$14.99</span>
+          <span class="price-free">FREE</span>
+        </div>
 
-      <div class="book-info">
-        <div class="book-title">📖 ASVAB Study Guide 2025-2026</div>
-        <div class="book-details">
-          <span>✓</span> Complete exam preparation guide<br>
-          <span>✓</span> Practice questions with detailed answers<br>
-          <span>✓</span> Study strategies and test-day tips<br>
-          <span>✓</span> Normally $14.99 on Amazon — <span>yours free</span>
+        <h1>Get the <span class="highlight">ASVAB Study Guide</span> — on us</h1>
+
+        <form method="post" class="form-container" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" id="aweber-form">
+          <input type="hidden" name="meta_web_form_id" value="912576574" />
+          <input type="hidden" name="meta_split_id" value="" />
+          <input type="hidden" name="listname" value="awlist6950422" />
+          <input type="hidden" name="redirect" value="https://number1-create.github.io/arc-test/#download" />
+          <input type="hidden" name="meta_redirect_onlist" value="https://number1-create.github.io/arc-test/#download" />
+          <input type="hidden" name="meta_adtracking" value="ARC_Reader_Program_v2" />
+          <input type="hidden" name="meta_message" value="1" />
+          <input type="hidden" name="meta_required" value="name,email" />
+          <input type="hidden" name="meta_tooltip" value="" />
+
+          <input type="text" name="name" class="form-input" placeholder="Your name" required />
+          <input type="email" name="email" class="form-input" placeholder="Your best email" required />
+
+          <button type="submit" class="cta">Get My Free Copy →</button>
+        </form>
+
+        <div class="trust">
+          <div class="trust-item">1,400+ readers</div>
+          <div class="trust-item">Instant download</div>
+          <div class="trust-item">No credit card</div>
         </div>
       </div>
 
-      <div class="steps" id="how-it-works">
+      <!-- THANK YOU STATE -->
+      <div class="thank-you" id="thank-you">
+        <div class="check-icon">✅</div>
+        <h1>Your book is ready!</h1>
+        <a href="https://drive.google.com/file/d/1QyZeWN2MiBswCHi9sdP1oQbw5xLlR3vz/view?usp=sharing"
+           class="download-btn" target="_blank" id="download-link">
+          📖 Download Your Free Book
+        </a>
+        <p class="post-download">Check your email — we'll follow up in a few days.</p>
+      </div>
+
+    </div>
+
+    <!-- BELOW THE FOLD -->
+    <div class="details" id="below-fold">
+      <div class="details-title">What's inside this book:</div>
+      <div class="detail-item">Complete ASVAB exam preparation guide</div>
+      <div class="detail-item">Practice questions with detailed explanations</div>
+      <div class="detail-item">Proven test-day strategies and study plans</div>
+      <div class="detail-item">Normally $14.99 on Amazon — yours free today</div>
+
+      <div class="steps-section">
         <div class="steps-title">How it works</div>
-        <div class="step">
-          <div class="step-num">1</div>
-          <div>Enter your name and email below</div>
+        <div class="mini-step">
+          <div class="mini-step-num">1</div>
+          <div>Enter your name and email above</div>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
+        <div class="mini-step">
+          <div class="mini-step-num">2</div>
           <div>Get instant access to the full book (PDF)</div>
         </div>
-        <div class="step">
-          <div class="step-num">3</div>
+        <div class="mini-step">
+          <div class="mini-step-num">3</div>
           <div>Read it at your own pace — it's yours to keep</div>
         </div>
       </div>
-
-      <form method="post" class="form-container" accept-charset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl" id="aweber-form">
-        <input type="hidden" name="meta_web_form_id" value="912576574" />
-        <input type="hidden" name="meta_split_id" value="" />
-        <input type="hidden" name="listname" value="awlist6950422" />
-        <input type="hidden" name="redirect" value="https://number1-create.github.io/arc-test/#download" />
-        <input type="hidden" name="meta_redirect_onlist" value="https://number1-create.github.io/arc-test/#download" />
-        <input type="hidden" name="meta_adtracking" value="ARC_Reader_Program_Messenger" />
-        <input type="hidden" name="meta_message" value="1" />
-        <input type="hidden" name="meta_required" value="name,email" />
-        <input type="hidden" name="meta_tooltip" value="" />
-
-        <label class="form-label" for="name">Your Name</label>
-        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
-
-        <label class="form-label" for="email">Your Email</label>
-        <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
-
-        <button type="submit" class="cta" id="submit-btn">
-          Get My Free Copy →
-        </button>
-        <div class="urgency">Instant download — no credit card needed</div>
-      </form>
-
-      <div class="guarantees">
-        <div class="guarantee"><span class="dot"></span> 100% free</div>
-        <div class="guarantee"><span class="dot"></span> No spam</div>
-        <div class="guarantee"><span class="dot"></span> Instant access</div>
-      </div>
     </div>
-
-    <!-- THANK YOU STATE (shown after form submit or #download) -->
-    <div class="thank-you" id="thank-you">
-      <div class="check-icon">✅</div>
-
-      <h1>Your book is ready!</h1>
-
-      <p class="subheadline">
-        Download your free ASVAB Study Guide below. Enjoy the read!
-      </p>
-
-      <a href="https://drive.google.com/file/d/1QyZeWN2MiBswCHi9sdP1oQbw5xLlR3vz/view?usp=sharing"
-         class="download-btn"
-         target="_blank"
-         id="download-link">
-        📖 Download Your Free Book
-      </a>
-
-      <p style="color: #888; font-size: 13px; margin-top: 20px;">
-        We'll follow up by email in a few days to hear what you think.
-      </p>
-
-      <div class="guarantees">
-        <div class="guarantee"><span class="dot"></span> PDF format</div>
-        <div class="guarantee"><span class="dot"></span> Yours to keep</div>
-        <div class="guarantee"><span class="dot"></span> No strings attached</div>
-      </div>
-    </div>
-
-    <!-- BOOKS SECTION (for "What books are available?" button) -->
-    <div id="books" style="display:none;"></div>
 
     <p class="disclosure">
-      Vanguard Books Reader Program. You'll receive occasional emails about new books and reading opportunities. Unsubscribe anytime. Your data is never shared with third parties.
+      Vanguard Books Reader Program. No spam. Unsubscribe anytime. Your data is never shared.
     </p>
   </div>
 
   <script>
-    // Show thank you state if #download in URL (redirect from AWeber)
+    // Thank you state
     if (window.location.hash === '#download') {
       document.getElementById('form-state').classList.add('hidden');
       document.getElementById('thank-you').classList.add('active');
-      if (typeof plausible === 'function') {
-        plausible('Book Downloaded');
-      }
+      document.getElementById('below-fold').style.display = 'none';
+      if (typeof plausible === 'function') plausible('Book Downloaded');
     }
 
     // Track form submit
     document.getElementById('aweber-form').addEventListener('submit', function() {
-      try {
-        if (typeof plausible === 'function') {
-          plausible('Form Submit');
-        }
-      } catch(e) {}
+      try { if (typeof plausible === 'function') plausible('Form Submit'); } catch(e) {}
     });
 
     // Track download click
-    document.getElementById('download-link').addEventListener('click', function() {
-      try {
-        if (typeof plausible === 'function') {
-          plausible('PDF Download Click');
-        }
-      } catch(e) {}
+    var dl = document.getElementById('download-link');
+    if (dl) dl.addEventListener('click', function() {
+      try { if (typeof plausible === 'function') plausible('PDF Download Click'); } catch(e) {}
     });
   </script>
 </body>
