@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Books — Vanguard Books Reader Program</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script async src="https://plausible.io/js/pa-iyYNTZ6knacFJUCGUzFmn.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 560px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      color: #00ff88;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 30px; font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
+    .highlight { color: #00ff88; }
+    .subheadline { font-size: 16px; color: #c0c0c0; margin-bottom: 28px; }
+    .book-card {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(0, 255, 136, 0.15);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .book-card.featured { border-color: rgba(0, 255, 136, 0.4); }
+    .book-status {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .status-live { background: rgba(0, 255, 136, 0.15); color: #00ff88; }
+    .status-soon { background: rgba(255, 200, 0, 0.15); color: #ffc800; }
+    .book-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .book-desc { font-size: 14px; color: #b0b0b0; margin-bottom: 12px; }
+    .book-price { font-size: 13px; color: #888; }
+    .book-price span { color: #ff6b6b; text-decoration: line-through; margin-right: 8px; }
+    .book-price strong { color: #00ff88; }
+    .cta {
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+      color: #0f0f1e;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 18px 32px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(0, 255, 136, 0.25);
+      margin-top: 12px;
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(0, 255, 136, 0.4); }
+    @media (max-width: 600px) {
+      .container { padding: 32px 22px; }
+      h1 { font-size: 25px; }
+      .cta { font-size: 16px; padding: 16px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">📚 Reader Program</div>
+
+    <h1>Books <span class="highlight">available now</span></h1>
+
+    <p class="subheadline">New books added every month. Claim yours for free.</p>
+
+    <div class="book-card featured">
+      <span class="book-status status-live">🟢 Available Now</span>
+      <div class="book-title">📖 ASVAB Study Guide 2025-2026</div>
+      <div class="book-desc">Complete exam preparation with practice questions, detailed answers, and test-day strategies.</div>
+      <div class="book-price"><span>$14.99</span> <strong>FREE for readers</strong></div>
+      <a href="https://number1-create.github.io/arc-test/" class="cta" style="margin-top:16px; font-size:16px; padding:14px 24px;">Claim This Book →</a>
+    </div>
+
+    <div class="book-card">
+      <span class="book-status status-soon">🟡 Coming Soon</span>
+      <div class="book-title">📖 GED Test Prep 2025</div>
+      <div class="book-desc">Full GED preparation guide — Math, Science, Social Studies, Language Arts.</div>
+      <div class="book-price"><span>$16.99</span> <strong>FREE when available</strong></div>
+    </div>
+
+    <div class="book-card">
+      <span class="book-status status-soon">🟡 Coming Soon</span>
+      <div class="book-title">📖 ATI TEAS Nursing Exam Prep</div>
+      <div class="book-desc">Complete TEAS preparation for nursing school admissions.</div>
+      <div class="book-price"><span>$18.99</span> <strong>FREE when available</strong></div>
+    </div>
+
+    <p style="color:#888; font-size:13px; margin-top:24px;">
+      Join the Reader Program now to get notified when new books drop.
+    </p>
+  </div>
+</body>
+</html>
